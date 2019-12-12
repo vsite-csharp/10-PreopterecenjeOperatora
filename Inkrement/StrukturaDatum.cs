@@ -35,8 +35,11 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0}.{1}.{2}", Dan, Mjesec, Godina);
         }
 
-        // TODO:010 Definirati operator ++ koji će objekt tipa StrukturaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
+        public static StrukturaDatum operator++(StrukturaDatum date)
+        {
+            Datum.UvećajDan(ref date.dan, ref date.mjesec, ref date.godina);
+            return date;
+        }
 
     }
 }
