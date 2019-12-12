@@ -13,17 +13,40 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Console.WriteLine($"Početni datum: {sd}");
 
             // TODO:011 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Pre-inkrement:");
-            //StrukturaDatum sdPre = ++sd;
-            //Console.WriteLine($"Original: {sd}");
-            //Console.WriteLine($"Pre:      {sdPre}");
+            Console.WriteLine("Pre-inkrement:");
+            StrukturaDatum sdPre = ++sd;
+            Console.WriteLine($"Original: {sd}");
+            Console.WriteLine($"Pre:      {sdPre}");
+            /*NAKON ODKOMETIRANJA GORNJEG:
+             * StrukturaDatum:
+                Pocetni datum: 31.12.2015
+                Pre-inkrement:
+                Original: 1.1.2016
+                Pre:      1.1.2016
+                KlasaDatum:
+                Pocetni datum: 28.2.2016
+                GOTOVO!!!*/
 
             // TODO:012 Otkomentirati donje naredbe koje koriste postfiksni operator ++i pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Post-inkrement:");
-            //StrukturaDatum sdPost = sd++;
-            //Console.WriteLine($"Original: {sd}");
-            //Console.WriteLine($"Post:     {sdPost}");
-            //Console.WriteLine($"Pre:      {sdPre}");
+            Console.WriteLine("Post-inkrement:");
+            StrukturaDatum sdPost = sd++;
+            Console.WriteLine($"Original: {sd}");
+            Console.WriteLine($"Post:     {sdPost}");
+            Console.WriteLine($"Pre:      {sdPre}");
+            /*NAKON ODKOMETIRANJA GORNJEG:
+             * StrukturaDatum:
+                Pocetni datum: 31.12.2015
+                Pre-inkrement:
+                Original: 1.1.2016
+                Pre:      1.1.2016
+                Post-inkrement:
+                Original: 2.1.2016
+                Post:     1.1.2016
+                Pre:      1.1.2016
+                KlasaDatum:
+                Pocetni datum: 28.2.2016
+                GOTOVO!!!
+             * */
 
             Console.WriteLine("KlasaDatum:");
 
@@ -31,18 +54,19 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             Console.WriteLine($"Početni datum: {kd}");
 
-            // TODO:014 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Pre-inkrement:");
-            //KlasaDatum kdPre = ++kd;
-            //Console.WriteLine($"Original: {kd}");
-            //Console.WriteLine($"Pre:      {kdPre}");
+            // TODO:014 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis
+            //....neće raditi ako nismo napravili preinake u KlasaDatum (013)
+            Console.WriteLine("Pre-inkrement:");
+            KlasaDatum kdPre = ++kd;
+            Console.WriteLine($"Original: {kd}");
+            Console.WriteLine($"Pre:      {kdPre}");
 
             // TODO:014 Otkomentirati donje naredbe koje koriste postfiksni operator ++ pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Post-inkrement:");
-            //KlasaDatum kdPost = kd++;
-            //Console.WriteLine($"Original: {kd}");
-            //Console.WriteLine($"Post:     {kdPost}");
-            //Console.WriteLine($"Pre:      {kdPre}");
+            Console.WriteLine("Post-inkrement:");
+            KlasaDatum kdPost = kd++;
+            Console.WriteLine($"Original: {kd}");
+            Console.WriteLine($"Post:     {kdPost}");
+            Console.WriteLine($"Pre:      {kdPre}");
 
             // TODO:015 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
 
