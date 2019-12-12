@@ -55,7 +55,11 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         }
 
         // TODO:013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
+        public static KlasaDatum operator ++(KlasaDatum datum)
+        {
+            Datum.UvećajDan(ref datum.dan, ref datum.mjesec, ref datum.godina);
+            return datum;
+        }
 
     }
 }
