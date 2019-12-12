@@ -23,7 +23,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 // Naredba koja poziva konstruktor pretvorbe iz double
                 rac = new Racionalni(0.125F);
                 Debug.Assert(rac.ToString() == "1 / 8");
-                Console.WriteLine(rac);
+                Console.WriteLine(rac); 
 
                 // Pokrenuti i provjeriti testove (3 testa iz grupe "TestKonstruktoraPretvorbe" moraju proći).
             }

@@ -45,7 +45,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             long nzv = NajvećiZajedničkiVišekratnik(brojnik, nazivnik);
             Brojnik = brojnik / nzv;
             Nazivnik = nazivnik / nzv;
-        }
+        } 
 
         private long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
         {
