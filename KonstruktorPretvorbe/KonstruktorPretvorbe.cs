@@ -21,8 +21,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
                 // TODO:023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
                 // Naredba koja poziva konstruktor pretvorbe iz double
-                //rac = new Racionalni(0.125F);
-                //Debug.Assert(rac.ToString() == "1 / 8");
+                rac = new Racionalni(0.125F);
+                Debug.Assert(rac.ToString() == "1 / 8");
                 Console.WriteLine(rac);
 
                 // TODO:024 Pokrenuti i provjeriti testove (3 testa iz grupe "TestKonstruktoraPretvorbe" moraju proći).
