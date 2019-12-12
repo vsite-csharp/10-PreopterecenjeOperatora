@@ -15,9 +15,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 Console.WriteLine(rac);
 
                 // TODO:022 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
-                //rac = new Racionalni(0.25);
-                //Debug.Assert(rac.ToString() == "1 / 4");
+                rac = new Racionalni(0.25);
+                Debug.Assert(rac.ToString() == "1 / 4");
                 Console.WriteLine(rac);
+                /*25 / 1
+                1 / 4
+                1 / 4
+                GOTOVO!!!*/
 
                 // TODO:023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
                 // Naredba koja poziva konstruktor pretvorbe iz double
