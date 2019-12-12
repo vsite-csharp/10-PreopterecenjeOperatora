@@ -25,7 +25,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 Debug.Assert(rac.ToString() == "1 / 8");
                 Console.WriteLine(rac);
 
-                // TODO:024 Pokrenuti i provjeriti testove (3 testa iz grupe "TestKonstruktoraPretvorbe" moraju proći).
+               
             }
             catch (System.Exception e)
             {
