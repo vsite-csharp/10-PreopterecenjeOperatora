@@ -29,6 +29,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
+
         }
     }
 }
