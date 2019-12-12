@@ -42,12 +42,10 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             return new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br2.ImaginarniDio);
         }
-        // TODO:003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
         public static KompleksniBroj operator-(KompleksniBroj number)
         {
             return new KompleksniBroj(-number.RealniDio, -number.ImaginarniDio);
         }
-        // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
 
