@@ -56,6 +56,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 return;
             dan = 1;
             UvećajMjesec(ref mjesec, ref godina);
+
         }
     }
 }

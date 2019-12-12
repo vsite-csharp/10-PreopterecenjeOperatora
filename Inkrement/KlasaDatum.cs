@@ -56,6 +56,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
 
         public static KlasaDatum operator ++(KlasaDatum d)
+
         {
             KlasaDatum datum = (KlasaDatum) d.MemberwiseClone();
             Datum.UvećajDan(ref datum.dan, ref datum.mjesec, ref datum.godina);

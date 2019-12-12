@@ -8,6 +8,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             Console.WriteLine("StrukturaDatum:");
 
+
             StrukturaDatum sd = new StrukturaDatum(2015, 12, 31);
 
             Console.WriteLine($"Početni datum: {sd}");
