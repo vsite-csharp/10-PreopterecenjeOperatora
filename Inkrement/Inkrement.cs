@@ -16,7 +16,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Console.WriteLine("Pre-inkrement:");
             StrukturaDatum sdPre = ++sd;
             Console.WriteLine($"Original: {sd}");
-            Console.WriteLine($"Pre:      {sdPre}");
+            Console.WriteLine($"Pre:      {sdPre}"); 
 
             // Otkomentirati donje naredbe koje koriste postfiksni operator ++i pokrenuti program te provjeriti ispis.
             Console.WriteLine("Post-inkrement:");

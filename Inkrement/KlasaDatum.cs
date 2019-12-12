@@ -40,7 +40,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             if (obj == null)
                 return false;
             if (obj.GetType() != GetType())
-                return false;
+                return false; 
             KlasaDatum drugi = (KlasaDatum)obj;
             if (drugi.Godina != Godina)
                 return false;

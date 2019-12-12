@@ -19,7 +19,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public int Mjesec
         {
             get { return mjesec; }
-        }
+        } 
 
         public int Dan
         {
