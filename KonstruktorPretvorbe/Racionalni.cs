@@ -29,7 +29,11 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
         // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
 
+            public Racionalni(double broj):this()
+        {
 
+            Raščlani(broj);
+        }
         private void Raščlani(double broj)
         {
             long brojnik = (long)broj;
