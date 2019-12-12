@@ -54,7 +54,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         // Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
-
+     
     class OperatoriPlusMinus
     {
         static void Main(string[] args)
