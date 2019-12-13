@@ -47,6 +47,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Nazivnik = nazivnik / nzv;
         }
 
+        
+
         private long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
         {
             if (prviBroj == drugiBroj)
@@ -71,6 +73,24 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public static implicit operator Racionalni(double d)
         {
             return new Racionalni(d);
+        }
+
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni d)
+        {
+            return d.ToDouble();
+        }
+        public long ToInt64()
+        {
+            return Brojnik / Nazivnik;
+        }
+        public static explicit operator long(Racionalni l)
+        {
+            return l.ToInt64();
         }
     }
 }
