@@ -63,5 +63,14 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
+
+        public static implicit operator Racionalni(long l)
+        {
+            return new Racionalni(l);
+        }
+        public static implicit operator Racionalni(double d)
+        {
+            return new Racionalni(d);
+        }
     }
 }
