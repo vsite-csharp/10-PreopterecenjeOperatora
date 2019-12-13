@@ -10,6 +10,14 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Nazivnik = nazivnik;
         }
 
+        public static implicit operator Racionalni(long d) => new Racionalni(d);
+        public static implicit operator Racionalni(double d)
+        {
+            if((long)d == 0)
+                return new Racionalni(1, (long)((d - (long)d) * 100));
+            return new Racionalni((long)d, (long)((d - (long)d) * 100));
+        }
+
         public long Brojnik
         {
             get;
