@@ -18,6 +18,12 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return new Racionalni((long)d, (long)((d - (long)d) * 100));
         }
 
+        public double ToDouble => (double)Brojnik/Nazivnik;
+        public long ToInt64 => Brojnik/Nazivnik;
+
+        public static explicit operator double(Racionalni d) => d.ToDouble;
+        public static explicit operator long(Racionalni d) => d.ToInt64;
+
         public long Brojnik
         {
             get;
@@ -70,5 +76,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
+
+
     }
 }
