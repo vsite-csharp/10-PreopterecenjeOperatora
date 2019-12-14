@@ -22,6 +22,18 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             private set;
         }
 
+        public static implicit operator Racionalni(long longToRac)
+        {
+            Racionalni r = new Racionalni(longToRac);
+            return r;
+        }
+
+        public static implicit operator Racionalni(double doubleToRac)
+        {
+            Racionalni r = new Racionalni(doubleToRac);
+            return r;
+        }
+
         public override string ToString()
         {
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
