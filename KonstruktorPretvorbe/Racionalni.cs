@@ -34,6 +34,25 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return r;
         }
 
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni rToD)
+        {
+            return rToD.ToDouble();
+        }
+
+        public long ToInt64()
+        {
+            return (long)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni rToL)
+        {
+            return rToL.ToInt64();
+        }
         public override string ToString()
         {
             return string.Format("{0} / {1}", Brojnik, Nazivnik);

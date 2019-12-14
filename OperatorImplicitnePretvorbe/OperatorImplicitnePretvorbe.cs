@@ -3,10 +3,6 @@ using System.Diagnostics;
 
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
-    // TODO:030 U strukturu Racionalni iz prethodnog projekta dodati operator implicitne konverzije iz long u Racionalni.
-
-    // TODO:032 U strukturu Racionalni iz prethodnog projekta dodati operator implicitne konverzije iz double u Racionalni.
-
     class OperatorImplicitnePretvorbe
     {
         static void Main(string[] args)
