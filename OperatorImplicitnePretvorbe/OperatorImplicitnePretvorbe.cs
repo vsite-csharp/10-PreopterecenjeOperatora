@@ -16,14 +16,14 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 Racionalni rac = new Racionalni();
                 // TODO:031 Otkomentirati donje naredbe i provjeriti ispis.
                 // koristi implicitnu pretvorbu iz int
-                //rac = 2;
-                //Debug.Assert(rac.ToString() == "2 / 1");
+                rac = 2;
+                Debug.Assert(rac.ToString() == "2 / 1");
                 Console.WriteLine(rac);
 
                 // TODO:033 Otkomentirati donje naredbe i provjeriti ispis.
                 // koristi implicitnu pretvorbu iz double
-                //rac = 0.1;
-                //Debug.Assert(rac.ToString() == "1 / 10");
+                rac = 0.1;
+                Debug.Assert(rac.ToString() == "1 / 10");
                 Console.WriteLine(rac);
 
                 //TODO:034 Pokrenuti i provjeriti testove (2 testa iz grupe "TestImplicitnePretvorbe" moraju proći).
@@ -38,3 +38,4 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         }
     }
 }
+

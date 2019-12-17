@@ -66,5 +66,31 @@ GOTOVO!!!*/
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
+        public static implicit operator Racionalni(long l)
+        {
+            return new Racionalni(l);
+        }
+        public static implicit operator Racionalni(double d)
+        {
+            return new Racionalni(d);
+        }
+
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni d)
+        {
+            return d.ToDouble();
+        }
+        public long ToInt64()
+        {
+            return Brojnik / Nazivnik;
+        }
+        public static explicit operator long(Racionalni l)
+        {
+            return l.ToInt64();
+        }
     }
 }
