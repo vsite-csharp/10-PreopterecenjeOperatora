@@ -24,8 +24,10 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
         public static implicit operator Racionalni(long longToRational) => new Racionalni(longToRational);
         public static implicit operator Racionalni(double doubleToRational) => new Racionalni(doubleToRational);
-
-
+        public double ToDouble => (double)Brojnik / Nazivnik;
+        public static explicit operator double(Racionalni r) => r.ToDouble;
+        public long ToInt64 => (long)Brojnik / Nazivnik;
+        public static explicit operator long(Racionalni r) => r.ToInt64;
 
         public override string ToString()
         {
