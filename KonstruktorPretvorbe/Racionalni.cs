@@ -25,7 +25,11 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Brojnik = Raščlani(broj).brojnik;
             Nazivnik = Raščlani(broj).nazivnik;
         }
-        
+        public static implicit operator long(Racionalni rac) => rac.Brojnik;
+        public static implicit operator Racionalni(long rac) => new Racionalni(rac);
+        public static implicit operator double(Racionalni rac) => rac.Brojnik;
+        public static implicit operator Racionalni(double rac) => new Racionalni(rac);
+
         private (long brojnik, long nazivnik) Raščlani(double broj)
         {
             long brojnik = (long)broj;
