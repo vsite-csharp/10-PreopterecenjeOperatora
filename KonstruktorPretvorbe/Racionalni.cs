@@ -19,9 +19,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
         }
 
-        // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
-
-
+        // dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        public Racionalni(double broj) :this(0,1)
+        {
+            Brojnik = Raščlani(broj).brojnik;
+            Nazivnik = Raščlani(broj).nazivnik;
+        }
+        
         private (long brojnik, long nazivnik) Raščlani(double broj)
         {
             long brojnik = (long)broj;
@@ -34,6 +38,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             long nzv = NajvećiZajedničkiVišekratnik(brojnik, nazivnik);
             return (brojnik / nzv, nazivnik / nzv);
         }
+       
 
         private long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
         {
