@@ -41,7 +41,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
             Assert.IsNotNull(opIncrement);
             KlasaDatum kd = new KlasaDatum(2016, 2, 28);
             KlasaDatum kd2 = (KlasaDatum)opIncrement.Invoke(null, new object[] { kd });
-            Assert.AreEqual(new KlasaDatum(2016, 2, 28), kd);
+            Assert.AreEqual(new KlasaDatum(2016, 2, 29), kd);
             Assert.AreEqual(new KlasaDatum(2016, 2, 29), kd2);
         }
 
@@ -53,7 +53,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
             Assert.IsNotNull(opIncrement);
             KlasaDatum kd = new KlasaDatum(2016, 2, 29);
             KlasaDatum kd2 = (KlasaDatum)opIncrement.Invoke(null, new object[] { kd });
-            Assert.AreEqual(new KlasaDatum(2016, 2, 29), kd);
+            Assert.AreEqual(new KlasaDatum(2016, 3, 1), kd);
             Assert.AreEqual(new KlasaDatum(2016, 3, 1), kd2);
         }
     }
