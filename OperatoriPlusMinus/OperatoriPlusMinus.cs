@@ -36,13 +36,16 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         // TODO:000 implementirati binarni operator + (za zbrajanje dva kompleksna broja), pokrenuti program i provjeriti ispis.
         public static KompleksniBroj operator +(KompleksniBroj br1, KompleksniBroj br2)
         {
-            throw new NotImplementedException();
+            new NotImplementedException();
         }
 
         // TODO:001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).
 
         // TODO:003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
-
+        public static KompleksniBroj operator -(KompleksniBroj br)
+        {
+            return new KompleksniBroj(-br.RealniDio, -br.ImaginarniDio);
+        }
         // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
@@ -54,8 +57,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             KompleksniBroj kb1 = new KompleksniBroj(1, 2);
             KompleksniBroj kb2 = new KompleksniBroj(0, -4);
 
-            KompleksniBroj zbroj = kb1 + kb2;
-            Console.WriteLine("({0}) + ({1}) = {2}", kb1, kb2, zbroj);
+            //KompleksniBroj zbroj = kb1 + kb2;
+            //Console.WriteLine("({0}) + ({1}) = {2}", kb1, kb2, zbroj);
 
             // Naredba koja poziva binarni operator -
             // TODO:002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
