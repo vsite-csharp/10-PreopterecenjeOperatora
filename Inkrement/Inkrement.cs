@@ -12,18 +12,18 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             Console.WriteLine($"Početni datum: {sd}");
 
-            // TODO:011 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Pre-inkrement:");
-            //StrukturaDatum sdPre = ++sd;
-            //Console.WriteLine($"Original: {sd}");
-            //Console.WriteLine($"Pre:      {sdPre}");
+            // Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
+            Console.WriteLine("Pre-inkrement:");
+            StrukturaDatum sdPre = ++sd;
+            Console.WriteLine($"Original: {sd}");
+            Console.WriteLine($"Pre:      {sdPre}");
 
-            // TODO:012 Otkomentirati donje naredbe koje koriste postfiksni operator ++i pokrenuti program te provjeriti ispis.
-            //Console.WriteLine("Post-inkrement:");
-            //StrukturaDatum sdPost = sd++;
-            //Console.WriteLine($"Original: {sd}");
-            //Console.WriteLine($"Post:     {sdPost}");
-            //Console.WriteLine($"Pre:      {sdPre}");
+            // Otkomentirati donje naredbe koje koriste postfiksni operator ++i pokrenuti program te provjeriti ispis.
+            Console.WriteLine("Post-inkrement:");
+            StrukturaDatum sdPost = sd++;
+            Console.WriteLine($"Original: {sd}");
+            Console.WriteLine($"Post:     {sdPost}");
+            Console.WriteLine($"Pre:      {sdPre}");
 
             Console.WriteLine("KlasaDatum:");
 

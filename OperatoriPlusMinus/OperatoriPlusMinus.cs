@@ -63,7 +63,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             // Naredba koja poziva binarni operator -
             // Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //KompleksniBroj razlika = kb2 - kb1;
+            KompleksniBroj razlika = kb2 - kb1;
             Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
 
             // Naredba koja poziva unarni operator -
