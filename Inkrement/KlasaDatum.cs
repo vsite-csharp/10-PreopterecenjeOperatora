@@ -56,8 +56,9 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
         public static KlasaDatum operator ++(KlasaDatum K)
         {
-            Datum.UvećajDan(ref K.dan, ref K.mjesec, ref K.godina);
-            return K;
+            KlasaDatum novi = new KlasaDatum(K.godina, K.mjesec, K.dan);
+            Datum.UvećajDan(ref novi.dan, ref novi.mjesec, ref novi.godina);
+            return novi;
         }
 
 
