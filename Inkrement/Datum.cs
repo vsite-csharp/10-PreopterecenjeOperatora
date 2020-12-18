@@ -16,7 +16,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return godina % 4 == 0;
         }
 
-        public static int BrojDanaUMjesecu(int mjesec, int godina)
+        public static int BrojDanaUMjesecu(int godina, int mjesec)
         {
             switch (mjesec)
             {
@@ -40,7 +40,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             }
         }
 
-        public static void UvećajMjesec(ref int mjesec, ref int godina)
+        public static void UvećajMjesec(ref int godina, ref int mjesec)
         {
             mjesec++;
             if (mjesec <= 12)
@@ -49,13 +49,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             ++godina;
         }
 
-        public static void UvećajDan(ref int dan, ref int mjesec, ref int godina)
+        public static void UvećajDan(ref int godina, ref int mjesec, ref int dan)
         {
             dan++;
-            if (dan <= BrojDanaUMjesecu(mjesec, godina))
+            if (dan <= BrojDanaUMjesecu(godina, mjesec))
                 return;
             dan = 1;
-            UvećajMjesec(ref mjesec, ref godina);
+            UvećajMjesec(ref godina, ref mjesec);
         }
     }
 }
