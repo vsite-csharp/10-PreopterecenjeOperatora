@@ -16,6 +16,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             get { return godina; }
         }
 
+
         public int Mjesec
         {
             get { return mjesec; }
