@@ -44,7 +44,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Console.WriteLine($"Post:     {kdPost}");
             Console.WriteLine($"Pre:      {kdPre}");
 
-            // TODO:015 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
+            //  Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);

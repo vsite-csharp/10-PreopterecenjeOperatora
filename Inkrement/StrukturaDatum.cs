@@ -39,7 +39,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public static StrukturaDatum operator ++(StrukturaDatum datum)
         {
             Datum.UvećajDan(ref datum.dan, ref datum.mjesec, ref datum.godina);
-            return new StrukturaDatum();
+            return datum;
         }
 
     }
