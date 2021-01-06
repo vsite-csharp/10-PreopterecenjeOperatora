@@ -52,10 +52,15 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public override int GetHashCode()
         {
             return Godina ^ Mjesec ^ Dan;
+        } 
+
+        // definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
+        public static KlasaDatum operator ++(KlasaDatum datum)
+        {
+            KlasaDatum noviDatum = new KlasaDatum(datum.godina, datum.mjesec, datum.dan);
+            Datum.UvećajDan(ref noviDatum.godina, ref noviDatum.mjesec, ref noviDatum.dan);
+            return noviDatum;
         }
-
-        // TODO:013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
 
     }
 }
