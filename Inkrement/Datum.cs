@@ -51,8 +51,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 mjesec = 1;
                 ++godina;
             }
-            return (godina, mjesec);
 
+            return (godina, mjesec);
         }
 
         // Metoda vraća n-torku (tuple) koja se sastoji od tri broja:
@@ -64,6 +64,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 dan = 1;
                 (godina, mjesec) = UvećajMjesec(godina, mjesec);
             }
+
             return (godina, mjesec, dan);
         }
     }
