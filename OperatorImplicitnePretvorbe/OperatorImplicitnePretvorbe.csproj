@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Vsite.CSharp.PreopterećenjeOperatora</RootNamespace>
     <AssemblyName>OperatorImplicitnePretvorbe</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +51,9 @@
       <Project>{e6e59d72-6227-4c2a-991f-d92eb45a4942}</Project>
       <Name>KonstruktorPretvorbe</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
