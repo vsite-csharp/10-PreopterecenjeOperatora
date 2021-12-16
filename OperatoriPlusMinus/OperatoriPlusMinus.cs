@@ -44,7 +44,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             return new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br2.ImaginarniDio);
         }
-        // TODO:003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
+        // :003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
         public static KompleksniBroj operator -(KompleksniBroj br1)
         {
             return new KompleksniBroj(-br1.RealniDio, -br1.ImaginarniDio);
