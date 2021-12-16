@@ -36,13 +36,20 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         // TODO:000 implementirati binarni operator + (za zbrajanje dva kompleksna broja), pokrenuti program i provjeriti ispis.
         public static KompleksniBroj operator +(KompleksniBroj br1, KompleksniBroj br2)
         {
-            throw new NotImplementedException();
+            return new KompleksniBroj(br1.RealniDio + br2.RealniDio, br1.ImaginarniDio + br2.ImaginarniDio);
         }
 
         // TODO:001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).
+        public static KompleksniBroj operator -(KompleksniBroj br1, KompleksniBroj br2)
+        {
+            return new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br2.ImaginarniDio);
+        }
 
         // TODO:003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
-
+        public static KompleksniBroj operator -(KompleksniBroj br1)
+        {
+            return new KompleksniBroj(-br1.RealniDio, -br1.ImaginarniDio);
+        }
         // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
@@ -59,13 +66,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             // Naredba koja poziva binarni operator -
             // TODO:002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //KompleksniBroj razlika = kb2 - kb1;
-            //Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
+            KompleksniBroj razlika = kb2 - kb1;
+            Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
 
             //Naredba koja poziva unarni operator -
             // TODO:004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //var negativni = -zbroj;
-            //Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
+            var negativni = -zbroj;
+            Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);
