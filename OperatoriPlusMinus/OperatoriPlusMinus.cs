@@ -47,7 +47,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         // :003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
         public static KompleksniBroj operator -(KompleksniBroj br1)
         {
-            new KompleksniBroj(-br1.RealniDio , -br1.ImaginarniDio);
+            new KompleksniBroj(-br1.RealniDio, -br1.ImaginarniDio);
         }
         // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
