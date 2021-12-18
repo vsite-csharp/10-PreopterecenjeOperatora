@@ -20,6 +20,26 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return new Racionalni(broj);
         }
 
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni r)
+        {
+            return r.ToDouble();
+        }
+
+        public long ToInt64()
+        {
+            return (long) (Brojnik / Nazivnik);
+        }
+
+        public static explicit operator long(Racionalni r)
+        {
+            return r.ToInt64();
+        }
+
         public readonly long Brojnik;
 
         public readonly long Nazivnik;
