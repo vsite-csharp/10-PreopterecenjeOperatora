@@ -9,7 +9,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             try
             {
-                // TODO:020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
+                // :020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
                 Racionalni rac = new Racionalni(25);
                 Debug.Assert(rac.ToString() == "25 / 1");
                 Console.WriteLine(rac);
@@ -19,7 +19,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 //Debug.Assert(rac.ToString() == "1 / 4");
                 Console.WriteLine(rac);
 
-                // TODO:023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
+                // :023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
                 // Naredba koja poziva konstruktor pretvorbe iz double
                 //rac = new Racionalni(0.125F);
                 //Debug.Assert(rac.ToString() == "1 / 8");
