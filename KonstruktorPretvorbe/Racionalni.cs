@@ -25,6 +25,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             (Brojnik, Nazivnik) = Raščlani(broj);
         }
 
+        //iz TODOova za 03:
         public static implicit operator Racionalni(long broj)
         {
             return new Racionalni(broj);
@@ -33,6 +34,27 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public static implicit operator Racionalni(double broj)
         {
             return new Racionalni(broj);
+        }
+
+        //iz TODOova za 04:
+        public static double ToDouble(Racionalni broj)
+        {
+            return (double)broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni broj)
+        {
+            return ToDouble(broj);
+        }
+
+        public static long ToInt64(Racionalni broj)
+        {
+            return (long)broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni broj)
+        {
+            return ToInt64(broj);
         }
 
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
