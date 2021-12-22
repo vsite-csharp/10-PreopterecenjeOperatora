@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
@@ -36,14 +35,11 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0}.{1}.{2}", Dan, Mjesec, Godina);
         }
 
-        // TODO:010 Definirati operator ++ koji će objekt tipa StrukturaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-        public static StrukturaDatum operator ++(StrukturaDatum strukturaDatum)
+        // :010 Definirati operator ++ koji će objekt tipa StrukturaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
+        public static StrukturaDatum operator ++(StrukturaDatum sd)
         {
-            var godina = strukturaDatum.Godina;
-            var mjesec = strukturaDatum.Mjesec;
-            var dan = strukturaDatum.Dan;
-            Datum.UvećajDan(ref godina, ref mjesec, ref dan);
-            return new StrukturaDatum(godina, mjesec, dan);
+            (sd.godina, sd.mjesec, sd.dan) = Datum.UvećajDan(sd.Godina, sd.Mjesec, sd.dan);
+            return sd;
         }
 
     }

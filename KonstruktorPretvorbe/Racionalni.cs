@@ -10,6 +10,36 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Nazivnik = nazivnik;
         }
 
+        public static implicit operator Racionalni(long broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        public static implicit operator Racionalni(double broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni r)
+        {
+            return r.ToDouble();
+        }
+
+        public long ToInt64()
+        {
+            return (long)(Brojnik / Nazivnik);
+        }
+
+        public static explicit operator long(Racionalni r)
+        {
+            return r.ToInt64();
+        }
+
         public readonly long Brojnik;
 
         public readonly long Nazivnik;
@@ -19,22 +49,10 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
         }
 
-        //  dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        // 021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
         public Racionalni(double broj)
         {
-            var rez = Raščlani(broj);
-            Brojnik = rez.brojnik;
-            Nazivnik = rez.nazivnik;
-        }
-
-        public static implicit operator Racionalni(double broj)
-        {
-            return new Racionalni(broj);
-        }
-
-        public static implicit operator Racionalni(long broj)
-        {
-            return new Racionalni(broj);
+            (Brojnik, Nazivnik) = Raščlani(broj);
         }
 
         private static (long brojnik, long nazivnik) Raščlani(double broj)
@@ -65,26 +83,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             if (ostatak == 0)
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
-        }
-
-        public static explicit operator double(Racionalni racionalni)
-        {
-            return racionalni.ToDouble();
-        }
-
-        public double ToDouble()
-        {
-            return (double)this.Brojnik / (double)this.Nazivnik;
-        }
-
-        public static explicit operator long(Racionalni racionalni)
-        {
-            return racionalni.ToInt64();
-        }
-
-        public long ToInt64()
-        {
-            return this.Brojnik / this.Nazivnik;
         }
     }
 }

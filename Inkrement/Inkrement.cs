@@ -21,6 +21,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             // :012 Otkomentirati donje naredbe koje koriste postfiksni operator ++i pokrenuti program te provjeriti ispis.
             Console.WriteLine("Post-inkrement:");
             StrukturaDatum sdPost = sd++;
+            ++sd;
             Console.WriteLine($"Original: {sd}");
             Console.WriteLine($"Post:     {sdPost}");
             Console.WriteLine($"Pre:      {sdPre}");
@@ -37,6 +38,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Console.WriteLine($"Original: {kd}");
             Console.WriteLine($"Pre:      {kdPre}");
 
+            kd++;
             // :015 Otkomentirati donje naredbe koje koriste postfiksni operator ++ pokrenuti program te provjeriti ispis.
             Console.WriteLine("Post-inkrement:");
             KlasaDatum kdPost = kd++;
@@ -44,7 +46,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Console.WriteLine($"Post:     {kdPost}");
             Console.WriteLine($"Pre:      {kdPre}");
 
-            // TODO:016 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
+            // :016 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);

@@ -54,14 +54,10 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return Godina ^ Mjesec ^ Dan;
         }
 
-        // TODO:013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
-        public static KlasaDatum operator ++(KlasaDatum klasaDatum)
+        // :013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
+        public static KlasaDatum operator ++(KlasaDatum sd)
         {
-            var godina = klasaDatum.Godina;
-            var mjesec = klasaDatum.Mjesec;
-            var dan = klasaDatum.Dan;
-            Datum.UvećajDan(ref godina, ref mjesec, ref dan);
+            (int godina, int mjesec, int dan) = Datum.UvećajDan(sd.Godina, sd.Mjesec, sd.dan);
             return new KlasaDatum(godina, mjesec, dan);
         }
     }
