@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct Racionalni
@@ -19,7 +20,43 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
         }
 
-        // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        // 021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        public Racionalni(double broj)
+        {
+            (Brojnik, Nazivnik) = Raščlani(broj);
+        }
+
+        //iz TODOova za 03:
+        public static implicit operator Racionalni(long broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        public static implicit operator Racionalni(double broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        //iz TODOova za 04:
+        public static double ToDouble(Racionalni broj)
+        {
+            return (double)broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni broj)
+        {
+            return ToDouble(broj);
+        }
+
+        public static long ToInt64(Racionalni broj)
+        {
+            return (long)broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni broj)
+        {
+            return ToInt64(broj);
+        }
 
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
         // Za to treba biti dostupna struktura System.ValuTuple koja dolazi s .NET 4.7 i .NET Core,
