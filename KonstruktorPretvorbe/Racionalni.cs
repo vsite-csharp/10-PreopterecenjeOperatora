@@ -19,7 +19,12 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
         }
 
-        // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        // dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        public Racionalni(double broj)
+        {
+            this.Brojnik = Raščlani(broj).brojnik;
+            this.Nazivnik = Raščlani(broj).nazivnik;
+        }
 
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
         // Za to treba biti dostupna struktura System.ValuTuple koja dolazi s .NET 4.7 i .NET Core,
