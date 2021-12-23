@@ -68,5 +68,25 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             return new Racionalni(broj);
         }
+
+        public static double ToDouble(Racionalni broj)
+        {
+            return (double) broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni broj)
+        {
+            return ToDouble(broj);
+        }
+
+        public static long ToInt64(Racionalni broj)
+        {
+            return broj.Brojnik / broj.Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni broj)
+        {
+            return ToInt64(broj);
+        }
     }
 }
