@@ -31,20 +31,20 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
             Console.WriteLine($"Početni datum: {kd}");
 
-            // TODO:014 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
+            // :014 Otkomentirati donje naredbe koje koriste prefiksni operator ++ pokrenuti program te provjeriti ispis.
             Console.WriteLine("Pre-inkrement:");
             KlasaDatum kdPre = ++kd;
             Console.WriteLine($"Original: {kd}");
             Console.WriteLine($"Pre:      {kdPre}");
 
-            // TODO:014 Otkomentirati donje naredbe koje koriste postfiksni operator ++ pokrenuti program te provjeriti ispis.
+            // :014 Otkomentirati donje naredbe koje koriste postfiksni operator ++ pokrenuti program te provjeriti ispis.
             Console.WriteLine("Post-inkrement:");
             KlasaDatum kdPost = kd++;
             Console.WriteLine($"Original: {kd}");
             Console.WriteLine($"Post:     {kdPost}");
             Console.WriteLine($"Pre:      {kdPre}");
 
-            // TODO:015 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
+            // :015 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
 
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey(true);

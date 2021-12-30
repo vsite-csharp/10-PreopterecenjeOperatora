@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct Racionalni
@@ -19,10 +18,15 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return string.Format("{0} / {1}", Brojnik, Nazivnik);
         }
 
-        // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        // :021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        public Racionalni(double broj)
+        {
+            var rezultat = Raščlani(broj);
+            Brojnik = rezultat.brojnik;
+            Nazivnik = rezultat.nazivnik;
+        }
 
-
-        private (long brojnik, long nazivnik) Raščlani(double broj)
+        private static (long brojnik, long nazivnik) Raščlani(double broj)
         {
             long brojnik = (long)broj;
             long nazivnik = 1;
@@ -35,7 +39,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return (brojnik / nzv, nazivnik / nzv);
         }
 
-        private long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
+        private static long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
         {
             if (prviBroj == drugiBroj)
                 return prviBroj;
@@ -44,12 +48,44 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return SljedećiVišekratnik(prviBroj, drugiBroj);
         }
 
-        private long SljedećiVišekratnik(long manjiBroj, long veciBroj)
+        private static long SljedećiVišekratnik(long manjiBroj, long veciBroj)
         {
             long ostatak = veciBroj % manjiBroj;
             if (ostatak == 0)
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
+        }
+
+        //OperatorImplicitnePretvorbe
+        public static implicit operator Racionalni(long broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        public static implicit operator Racionalni(double broj)
+        {
+            return new Racionalni(broj);
+        }
+
+        //OperatorEksplicitnePretvorbe
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double (Racionalni racionalni)
+        {
+            return racionalni.ToDouble();
+        }
+
+        public double ToInt64()
+        {
+            return Brojnik / Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni racionalni)
+        {
+            return (long)racionalni.ToInt64();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             try
             {
-                // TODO:020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
+                // :020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
                 Racionalni rac = new Racionalni(25);
                 Debug.Assert(rac.ToString() == "25 / 1");
                 Console.WriteLine(rac);

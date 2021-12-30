@@ -40,22 +40,27 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             }
         }
 
-        public static void UvećajMjesec(ref int godina, ref int mjesec)
+        public static (int godina, int mjesec) UvećajMjesec(int godina, int mjesec)
         {
             mjesec++;
-            if (mjesec <= 12)
-                return;
-            mjesec = 1;
-            ++godina;
+            if (mjesec > 12)
+            {
+                mjesec = 1;
+                ++godina;
+            }
+            return (godina, mjesec);
         }
 
-        public static void UvećajDan(ref int godina, ref int mjesec, ref int dan)
+        // Metoda vraća n-torku(tuple) koja se sastoji od tri broja
+        public static (int godina, int mjesec, int dan) UvećajDan(int godina, int mjesec, int dan)
         {
             dan++;
-            if (dan <= BrojDanaUMjesecu(godina, mjesec))
-                return;
-            dan = 1;
-            UvećajMjesec(ref godina, ref mjesec);
+            if (dan > BrojDanaUMjesecu(godina, mjesec))
+            {
+                dan = 1;
+                (godina, mjesec) = UvećajMjesec(godina, mjesec);
+            }
+            return (godina, mjesec, dan);
         }
     }
 }
