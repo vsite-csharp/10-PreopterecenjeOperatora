@@ -23,13 +23,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             Racionalni rac = new Racionalni(2, 3);
             // TODO:042 Otkomentirati donje naredbe i provjeriti ispis.
             // eksplicitna pretvorba u double
-            //double racKaoDouble = (double)rac;
-            //Console.WriteLine(racKaoDouble);
+            double racKaoDouble = (double)rac;
+            Console.WriteLine(racKaoDouble);
 
             // TODO:045 Otkomentirati donje naredbe i provjeriti ispis.
             // eksplicitna pretvorba u int
-            //long racKaoInt = (long)rac;
-            //Console.WriteLine(racKaoInt);
+            long racKaoInt = (long)rac;
+            Console.WriteLine(racKaoInt);
 
             // TODO:046 Pokrenuti i provjeriti testove (2 testa iz grupe "TestEksplicitnePretvorbe" moraju proći).
 
