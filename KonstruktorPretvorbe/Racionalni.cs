@@ -24,7 +24,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             (Brojnik,Nazivnik)=Raščlani(broj);
         }
-        public static implicit operator Racionalni(int x)
+        public static implicit operator Racionalni(long x)
         {
             return new Racionalni(x);
         }
