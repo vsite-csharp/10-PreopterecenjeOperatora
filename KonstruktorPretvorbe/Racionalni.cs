@@ -4,6 +4,15 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct Racionalni
     {
+        public static implicit operator Racionalni(long br) {
+            return new Racionalni(br);
+        }
+
+        public static implicit operator Racionalni(double br)
+        {
+            return new Racionalni(br);
+        }
+
         public Racionalni(long brojnik = 0, long nazivnik = 1)
         {
             Brojnik = brojnik;
