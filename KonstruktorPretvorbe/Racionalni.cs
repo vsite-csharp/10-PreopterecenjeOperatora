@@ -35,6 +35,15 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return new Racionalni(br);
         }
 
+        public static explicit operator double(Racionalni br)
+        {
+            return (double)br.Brojnik / br.Nazivnik;
+        }      
+        public static explicit operator long(Racionalni br)
+        {
+            return br.Brojnik / br.Nazivnik;
+        }
+
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
         // Za to treba biti dostupna struktura System.ValuTuple koja dolazi s .NET 4.7 i .NET Core,
         // dok za starije verzije treba instalirati NuGet paket System.ValueTuple.
