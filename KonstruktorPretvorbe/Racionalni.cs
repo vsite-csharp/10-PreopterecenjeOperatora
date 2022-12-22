@@ -4,7 +4,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct Racionalni
     {
-        public static implicit operator Racionalni(long br) {
+        public static implicit operator Racionalni(long br)
+        {
             return new Racionalni(br);
         }
 
@@ -29,7 +30,8 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         }
 
         // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
-        public Racionalni(double racionalni) {
+        public Racionalni(double racionalni)
+        {
             (Brojnik, Nazivnik) = Raščlani(racionalni);
         }
 
@@ -66,5 +68,17 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 return manjiBroj;
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
+
+
+        public static explicit operator double(Racionalni br)
+        {
+            return br.Brojnik / (double)br.Nazivnik ;
+        }
+
+        public static explicit operator long(Racionalni br)
+        {
+            return br.Brojnik / br.Nazivnik;
+        }
     }
 }
+
