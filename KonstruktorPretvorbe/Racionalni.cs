@@ -20,6 +20,18 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         }
 
         // TODO:021 dodati konstruktor pretvorbe (konverzije) koji stvara racionalni broj iz tipa double i u njemu treba samo pozvati metodu Raščlani.
+        public Racionalni(double broj)
+        {
+            (Brojnik,Nazivnik)=Raščlani(broj);
+        }
+        public static implicit operator Racionalni(int x)
+        {
+            return new Racionalni(x);
+        }
+        public static implicit operator Racionalni(double x)
+        {
+            return new Racionalni(x);
+        }
 
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
         // Za to treba biti dostupna struktura System.ValuTuple koja dolazi s .NET 4.7 i .NET Core,
