@@ -51,7 +51,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             return new KompleksniBroj(-br1.RealniDio, -br1.ImaginarniDio);
         }
 
-        // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
+        // 005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
 
