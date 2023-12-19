@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora
 {
-    public class KlasaDatum
+    public class KlasaDatum : IEquatable<KlasaDatum>
     {
         public KlasaDatum(int godina, int mjesec, int dan)
         {
@@ -32,26 +30,37 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
         public override string ToString()
         {
-            return string.Format("{0}.{1}.{2}", Dan, Mjesec, Godina);
+            return $"{Dan}.{Mjesec}.{Godina}";
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            if (obj == null)
+            return Equals(obj as KlasaDatum);
+        }
+        public bool Equals(KlasaDatum? other)
+        {
+            if (other == null)
+            {
                 return false;
-            if (obj.GetType() != GetType())
+            }
+            if (other.GetType() != GetType())
+            {
                 return false;
-            KlasaDatum drugi = (KlasaDatum)obj;
-            if (drugi.Godina != Godina)
+            }
+            if (other.Godina != Godina)
+            {
                 return false;
-            if (drugi.Mjesec != Mjesec)
+            }
+            if (other.Mjesec != Mjesec)
+            {
                 return false;
-            return drugi.Dan == Dan;
+            }
+            return other.Dan == Dan;
         }
 
         public override int GetHashCode()
         {
-            return Godina ^ Mjesec ^ Dan;
+            return HashCode.Combine(Godina, Mjesec, Dan);
         }
 
         // TODO:013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.

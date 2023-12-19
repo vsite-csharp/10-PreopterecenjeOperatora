@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     struct KompleksniBroj
     {
@@ -16,20 +14,30 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         public override string ToString()
         {
             if (ImaginarniDio == 0)
+            {
                 return RealniDio.ToString();
+            }
             if (RealniDio == 0)
+            {
                 return PrikazImaginarnog();
+            }
             if (ImaginarniDio < 0)
+            {
                 return $"{RealniDio}{PrikazImaginarnog()}";
+            }
             return $"{RealniDio}+{PrikazImaginarnog()}";
         }
 
         private string PrikazImaginarnog()
         {
             if (ImaginarniDio == 1)
+            {
                 return "i";
+            }
             if (ImaginarniDio == -1)
+            { 
                 return "-i";
+            }
             return $"{ImaginarniDio}i";
         }
 
@@ -47,9 +55,9 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
     }
 
-    class OperatoriPlusMinus
+    static class OperatoriPlusMinus
     {
-        static void Main(string[] args)
+        static void Main()
         {
             KompleksniBroj kb1 = new KompleksniBroj(1, 2);
             KompleksniBroj kb2 = new KompleksniBroj(0, -4);
@@ -68,7 +76,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             //Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
     }
 }

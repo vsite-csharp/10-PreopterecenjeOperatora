@@ -1,9 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vsite.CSharp;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
 {
     [TestClass]
     public class TestOperatoraPlusMinus
@@ -26,7 +21,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
 
             KompleksniBroj kb1 = new KompleksniBroj(1, 2);
             KompleksniBroj kb2 = new KompleksniBroj(3, 5);
-            KompleksniBroj razlika = (KompleksniBroj)opSubtraction.Invoke(null, new object[] { kb1, kb2 });
+            KompleksniBroj? razlika = (KompleksniBroj?)opSubtraction?.Invoke(null, new object[] { kb1, kb2 })!;
             Assert.AreEqual(new KompleksniBroj(-2, -3), razlika);
         }
 
@@ -37,7 +32,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
             var opNegation = staticMethods.FirstOrDefault(mi => mi.Name == "op_UnaryNegation" && mi.ReturnType == typeof(KompleksniBroj) && mi.GetParameters().Count() == 1 && mi.GetParameters().ElementAt(0).ParameterType == typeof(KompleksniBroj));
             Assert.IsNotNull(opNegation);
             KompleksniBroj kb = new KompleksniBroj(1, 2);
-            KompleksniBroj negacija = (KompleksniBroj)opNegation.Invoke(null, new object[] { kb });
+            KompleksniBroj negacija = (KompleksniBroj)opNegation?.Invoke(null, new object[] { kb })!;
             Assert.AreEqual(new KompleksniBroj(-1, -2), negacija);
         }
     }

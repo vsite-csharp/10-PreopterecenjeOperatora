@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
 {
     [TestClass]
     public class TestEksplicitnePretvorbe
@@ -14,7 +10,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
             var opExplicitToDouble = staticMethods.FirstOrDefault(mi => mi.Name == "op_Explicit" && mi.ReturnType == typeof(double) && mi.GetParameters().Count() == 1 && mi.GetParameters().ElementAt(0).ParameterType == typeof(Racionalni));
             Assert.IsNotNull(opExplicitToDouble);
             Racionalni rac = new Racionalni(2, 3);
-            Assert.AreEqual(2.0 / 3.0, opExplicitToDouble.Invoke(null, new object[] { rac }));
+            Assert.AreEqual(2.0 / 3.0, opExplicitToDouble!.Invoke(null, new object[] { rac }));
         }
 
         [TestMethod]
@@ -24,7 +20,7 @@ namespace Vsite.CSharp.PreopterećenjeOperatora.Testovi
             var opExplicitToLong = staticMethods.FirstOrDefault(mi => mi.Name == "op_Explicit" && mi.ReturnType == typeof(long) && mi.GetParameters().Count() == 1 && mi.GetParameters().ElementAt(0).ParameterType == typeof(Racionalni));
             Assert.IsNotNull(opExplicitToLong);
             Racionalni rac = new Racionalni(2, 3);
-            Assert.AreEqual(2L / 3L, opExplicitToLong.Invoke(null, new object[] { rac }));
+            Assert.AreEqual(2L / 3L, opExplicitToLong!.Invoke(null, new object[] { rac }));
         }
     }
 }

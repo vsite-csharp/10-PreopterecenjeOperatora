@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
@@ -7,9 +6,9 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
 
     // TODO:032 U strukturu Racionalni iz prethodnog projekta dodati operator implicitne pretvorbe iz double u Racionalni.
 
-    class OperatorImplicitnePretvorbe
+    static class OperatorImplicitnePretvorbe
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
@@ -32,7 +31,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             }
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct Racionalni
     {
@@ -40,9 +38,13 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         private static long NajvećiZajedničkiVišekratnik(long prviBroj, long drugiBroj)
         {
             if (prviBroj == drugiBroj)
+            {
                 return prviBroj;
+            }
             if (prviBroj > drugiBroj)
+            {
                 return SljedećiVišekratnik(drugiBroj, prviBroj);
+            }
             return SljedećiVišekratnik(prviBroj, drugiBroj);
         }
 
@@ -50,7 +52,9 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             long ostatak = veciBroj % manjiBroj;
             if (ostatak == 0)
+            {
                 return manjiBroj;
+            }
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
     }

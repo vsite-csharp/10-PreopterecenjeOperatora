@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora
 {
     public struct StrukturaDatum
     {

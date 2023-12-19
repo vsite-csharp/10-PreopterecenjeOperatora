@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace Vsite.CSharp.PreopterećenjeOperatora
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             try
             {
@@ -20,7 +19,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
                 Console.WriteLine(rac);
 
                 // TODO:023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
-                // Naredba koja poziva konstruktor pretvorbe iz double
                 //rac = new Racionalni(0.125F);
                 //Debug.Assert(rac.ToString() == "1 / 8");
                 Console.WriteLine(rac);
@@ -33,7 +31,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             }
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
     }
 }

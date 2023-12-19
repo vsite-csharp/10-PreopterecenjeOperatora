@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Vsite.CSharp.PreopterećenjeOperatora
+﻿namespace Vsite.CSharp.PreopterećenjeOperatora
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("StrukturaDatum:");
 
@@ -47,7 +45,6 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
             // TODO:016 Pokrenuti i provjeriti testove (4 testa iz grupe "TestInkrementa" moraju proći).
 
             Console.WriteLine("GOTOVO!!!");
-            Console.ReadKey(true);
         }
     }
 }
