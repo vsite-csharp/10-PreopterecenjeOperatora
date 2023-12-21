@@ -74,7 +74,7 @@
             //Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
 
             //Naredba koja poziva unarni operator -
-            // :004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
+            //:004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
             var negativni = -zbroj;
             Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
 
