@@ -47,8 +47,11 @@
             return new KompleksniBroj(br1.RealniDio+br2.RealniDio,br1.ImaginarniDio+br2.ImaginarniDio);
         }
 
-        // TODO:001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).dz
-
+        // :001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).dz
+        public static KompleksniBroj operator -(KompleksniBroj br1, KompleksniBroj br2)
+        {
+            return new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br2.ImaginarniDio);
+        }
         // :003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
         public static KompleksniBroj operator -(KompleksniBroj br)
         {
@@ -70,9 +73,9 @@
             Console.WriteLine("({0}) + ({1}) = {2}", kb1, kb2, zbroj);
 
             // Naredba koja poziva binarni operator -
-            // TODO:002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //KompleksniBroj razlika = kb2 - kb1;
-            //Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
+            // :002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
+            KompleksniBroj razlika = kb2 - kb1;
+            Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
 
             //Naredba koja poziva unarni operator -
             // :004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
