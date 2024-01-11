@@ -60,7 +60,7 @@
             }
             return SljedećiVišekratnik(ostatak, manjiBroj);
         }
-
+        //implicitna pretvorba
         public static implicit operator Racionalni(long broj)
         {
             return new Racionalni(broj);
@@ -71,5 +71,15 @@
             return new Racionalni(broj);
         }
 
+        //eksplicitna pretvorba
+        public static explicit operator double(Racionalni br)
+        {
+            return (double)br.Brojnik / br.Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni br)
+        {
+            return br.Brojnik / br.Nazivnik;
+        }
     }
 }
