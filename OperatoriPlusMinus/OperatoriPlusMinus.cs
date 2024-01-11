@@ -41,15 +41,28 @@
             return $"{ImaginarniDio}i";
         }
 
-        // TODO:000 implementirati binarni operator + (za zbrajanje dva kompleksna broja), pokrenuti program i provjeriti ispis.
+        // :000 implementirati binarni operator + (za zbrajanje dva kompleksna broja), pokrenuti program i provjeriti ispis.
         public static KompleksniBroj operator +(KompleksniBroj br1, KompleksniBroj br2)
         {
-            throw new NotImplementedException();
+            KompleksniBroj zbroj = new KompleksniBroj(br1.RealniDio+br2.RealniDio, br1.ImaginarniDio+br2.ImaginarniDio);
+            return zbroj;
         }
 
-        // TODO:001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).
+        // :001 Implementirati binarni operator - (za oduzimanje dva kompleksna broja).
+        public static KompleksniBroj operator -(KompleksniBroj br1, KompleksniBroj br2)
+        {
+            KompleksniBroj oduzmi = new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br2.ImaginarniDio);
+            return oduzmi;
+        }
 
-        // TODO:003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
+
+
+        // :003 Implementirati preopterećeni unarni operator - (za promjenu predznaka).
+        public static KompleksniBroj operator -(KompleksniBroj br1)
+        {
+            KompleksniBroj negative = new KompleksniBroj(-br1.RealniDio, -br1.ImaginarniDio);
+            return negative;
+        }
 
         // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
@@ -66,14 +79,14 @@
             Console.WriteLine("({0}) + ({1}) = {2}", kb1, kb2, zbroj);
 
             // Naredba koja poziva binarni operator -
-            // TODO:002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //KompleksniBroj razlika = kb2 - kb1;
-            //Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
+            // :002 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
+            KompleksniBroj razlika = kb2 - kb1;
+            Console.WriteLine($"({kb2}) - ({kb1}) = {razlika}");
 
             //Naredba koja poziva unarni operator -
-            // TODO:004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
-            //var negativni = -zbroj;
-            //Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
+            // :004 Otkomentirati donje dvije naredbe, pokrenuti program i provjeriti ispis.
+            var negativni = -zbroj;
+            Console.WriteLine($"-[({kb1}) + ({kb2})] = {negativni}");
 
             Console.WriteLine("GOTOVO!!!");
         }
