@@ -33,8 +33,12 @@
             return string.Format("{0}.{1}.{2}", Dan, Mjesec, Godina);
         }
 
-        // TODO:010 Definirati operator ++ koji će objekt tipa StrukturaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
+        // :010 Definirati operator ++ koji će objekt tipa StrukturaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
+        public static StrukturaDatum operator++(StrukturaDatum struktura)
+        {
+            (struktura.godina, struktura.mjesec, struktura.dan) = Datum.UvećajDan(struktura.godina, struktura.mjesec, struktura.dan);
+            return struktura;
+        }
 
     }
 }
