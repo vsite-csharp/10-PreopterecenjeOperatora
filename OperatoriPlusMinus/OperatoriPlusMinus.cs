@@ -64,7 +64,7 @@
             return negative;
         }
 
-        // TODO:005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
+        // :005 Pokrenuti testove (3 testa u grupi "TestOperatoraPlusMinus" moraju proći).
 
     }
 

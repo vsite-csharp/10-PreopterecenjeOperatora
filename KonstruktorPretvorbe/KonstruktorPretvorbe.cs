@@ -8,22 +8,22 @@ namespace Vsite.CSharp.PreopterećenjeOperatora
         {
             try
             {
-                // TODO:020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
-                Racionalni rac = new Racionalni(25);
+                // :020 Provjeriti konstruktor koji će donja naredba pozvati, pokrenuti program i provjeriti ispis.
+                Racionalni rac = new Racionalni(25); //default
                 Debug.Assert(rac.ToString() == "25 / 1");
                 Console.WriteLine(rac);
 
-                // TODO:022 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
-                //rac = new Racionalni(0.25);
-                //Debug.Assert(rac.ToString() == "1 / 4");
+                // :022 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
+                rac = new Racionalni(0.25); //drugi s pretvorbom
+                Debug.Assert(rac.ToString() == "1 / 4");
                 Console.WriteLine(rac);
 
-                // TODO:023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
-                //rac = new Racionalni(0.125F);
-                //Debug.Assert(rac.ToString() == "1 / 8");
+                // :023 Provjeriti koji konstruktor će donja naredba pozvati, otkomentirati naredbu te pokrenuti program i provjeriti ispis.
+                rac = new Racionalni(0.125F); //drugi s pretvorbom
+                Debug.Assert(rac.ToString() == "1 / 8");
                 Console.WriteLine(rac);
 
-                // TODO:024 Pokrenuti i provjeriti testove (3 testa iz grupe "TestKonstruktoraPretvorbe" moraju proći).
+                // :024 Pokrenuti i provjeriti testove (3 testa iz grupe "TestKonstruktoraPretvorbe" moraju proći).
             }
             catch (System.Exception e)
             {
