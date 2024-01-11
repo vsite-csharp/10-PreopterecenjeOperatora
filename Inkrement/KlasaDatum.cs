@@ -63,8 +63,12 @@
             return HashCode.Combine(Godina, Mjesec, Dan);
         }
 
-        // TODO:013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
-
+        // :013 definirati operator ++ koji će objekt tipa KlasaDatum uvećati za jedan dan, pozivom statičke metode Datum.UvećajDan.
+        public static KlasaDatum operator++(KlasaDatum datum)
+        {
+            (int godina, int mjesec,int dan) = Datum.UvećajDan(datum.Godina, datum.Mjesec, datum.Dan);
+            return new KlasaDatum(godina, mjesec, dan);
+        }
 
     }
 }
