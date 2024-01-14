@@ -32,7 +32,25 @@
             return new Racionalni(broj);
         }
 
-       
+        public double ToDouble()
+        {
+            return (double)Brojnik / Nazivnik;
+        }
+
+        public static explicit operator double(Racionalni r)
+        {
+            return r.ToDouble();
+        }
+
+        public long ToInt64()
+        {
+            return Brojnik / Nazivnik;
+        }
+
+        public static explicit operator long(Racionalni r)
+        {
+            return r.ToInt64();
+        }
         // Metoda vraća n-torku (tuple) koja se sastoji od dva broja.
         // Za to treba biti dostupna struktura System.ValuTuple koja dolazi s .NET 4.7 i .NET Core,
         // dok za starije verzije treba instalirati NuGet paket System.ValueTuple.
